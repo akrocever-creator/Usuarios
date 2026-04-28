@@ -21,14 +21,22 @@
       align-items: center;
       justify-content: flex-start; 
       min-height: 100vh;
-      padding-top: 30px; 
+      padding-top: 10px; 
       padding-bottom: 40px;
     }
 
     .main-wrapper {
       width: 100%;
-      max-width: 360px;
+      max-width: 400px;
       padding: 10px;
+    }
+
+    /* 🔹 REGLA GLOBAL PARA IMÁGENES (ESTO EVITA QUE SE SALGAN) */
+    img {
+      max-width: 100%; /* No permite que la imagen sea más ancha que su contenedor */
+      height: auto;    /* Mantiene la proporción para que no se vea estirada */
+      display: block;
+      margin: 0 auto;  /* Las centra automáticamente */
     }
 
     /* 🔹 ESTILO GENERAL DE TARJETAS */
@@ -36,14 +44,13 @@
       background: #ffffff;
       border-radius: 10px;
       margin-bottom: 5px;
-      /* Eliminamos overflow: hidden para evitar cortes accidentales */
     }
 
     /* 🔹 TARJETA DE LOGIN */
     .login-card {
       border: 4px solid #3f8fb4; 
       box-shadow: 0 0 15px rgba(63, 143, 180, 0.3);
-      overflow: hidden; /* Aquí sí lo dejamos para que el header azul se vea bien */
+      overflow: hidden; 
     }
 
     /* 🔹 ENCABEZADO */
@@ -52,7 +59,7 @@
       color: #fff;
       text-align: center;
       font-size: 18px;
-      padding: 15px;
+      padding: 10px;
       font-family: 'Orbitron', sans-serif;
     }
 
@@ -60,13 +67,12 @@
     .news-card {
       border: 2px solid #d1d5db;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-      overflow: visible; /* Aseguramos que nada se corte */
     }
 
     /* 🔹 SEPARADOR */
     .separador {
       border: 0;
-      height: 1px;
+      height: 2px;
       background: #d1d5db;
       margin: 25px auto;
       width: 95%;
@@ -94,7 +100,7 @@
 
     .login-body button {
       width: 100%;
-      padding: 12px;
+      padding: 10px;
       background: #3f8fb4; 
       color: #fff;
       border: none;
@@ -124,13 +130,13 @@
 
     /* 🔹 CONTENIDO DE NOTICIAS */
     .news-container {
-      padding: 20px;
+      padding: 15px;
     }
 
     .news-profile {
       display: flex;
       align-items: center;
-      margin-bottom: 15px;
+      margin-bottom: 25px;
     }
 
     .profile-pic {
@@ -160,28 +166,22 @@
 
     .news-title {
       font-family: 'Orbitron', sans-serif;
-      font-size: 16px;
+      font-size: 15px;
       color: #003366;
       margin-bottom: 10px;
       text-transform: uppercase;
     }
 
     .news-text {
-      font-size: 13px;
-      line-height: 1.5;
+      font-size: 15px;
+      line-height: 1.2;
       color: #444;
       margin-bottom: 15px;
     }
 
-    /* 🔹 AJUSTE FINAL PARA LA IMAGEN CIRCULAR */
+    /* 🔹 ESTA CLASE SIGUE FUNCIONANDO POR SI QUIERES AJUSTES ESPECÍFICOS */
     .news-image {
-      width: 100%; 
-      max-width: 100%; 
-      height: auto !important; 
-      display: block;
-      margin: 0 auto;
-      /* Eliminamos cualquier recorte */
-      object-fit: contain;
+      border-radius: 8px; /* Opcional: para redondear un poco las esquinas */
     }
 
   </style>
@@ -203,12 +203,35 @@
           <label>Contraseña</label>
           <input type="password" name="password" required>
 
-          <button type="submit">Ingresar</button>
+          <button type="submit">Acceder</button>
         </form>
       </div>
     </div>
 
     <hr class="separador">
+
+    <div class="section-card news-card">
+      <div class="news-container">
+        
+        <div class="news-profile">
+          <div class="profile-pic">A</div>
+          <div class="profile-info">
+            <h4>Akrocever Oficial</h4>
+            <p>Martes 28 de Abril 2026 • 🌐</p>
+          </div>
+        </div>
+
+        <h3 class="news-title">INNOVACIÓN EN RECLUTAMIENTO</h3>
+        
+        <p class="news-text">
+        🚀 Nuestro sistema tecnológico esta creciendo.<br>
+        💡 Integramos tecnología avanzada y 🤝 conectamos equipos para optimizar cada etapa del proceso de atracción y selección de talento 💻 A través de soluciones digitales eficientes, logramos 🔗 conectar a las empresas con 🎯 candidatos calificados que buscan activamente nuevas oportunidades laborales, generando 📈 resultados reales, ⚡ ágiles y 📊 medibles para nuestros clientes.
+        </p>
+
+        <img src="https://i.ibb.co/vxv8QXDp/Picsart-26-01-02-16-45-16-428.png" alt="Lanzamiento Proyecto" class="news-image">
+
+      </div>
+    </div>
 
     <div class="section-card news-card">
       <div class="news-container">
@@ -229,7 +252,7 @@
         ¡Bienvenidos a esta nueva era con Akrocever!
         </p>
 
-        <img src="https://i.ibb.co/Ngqcmrqd/Picsart-26-03-09-18-42-49-312.png" alt="Picsart" class="news-image">
+        <img src="https://i.ibb.co/Ngqcmrqd/Picsart-26-03-09-18-42-49-312.png" alt="Inversión" class="news-image">
 
       </div>
     </div>
