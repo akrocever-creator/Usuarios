@@ -457,7 +457,7 @@ body {
         SALDO ACTUAL
       </div>
       <div class="card-body">
-        <div class="amount">$0.00<span class="currency">MXN</span></div>
+        <div class="amount">$150.00<span class="currency">MXN</span></div>
         <div class="desc">Ingresos pasivos acumulados</div>
       </div>
     </div>
@@ -470,7 +470,7 @@ body {
         SALDO DISPONIBLE
       </div>
       <div class="card-body">
-        <div class="amount">$0.00<span class="currency">MXN</span></div>
+        <div class="amount">$150.00<span class="currency">MXN</span></div>
         <div class="desc">Pendiente por recibir en efectivo</div>
       </div>
     </div>
@@ -483,7 +483,7 @@ body {
         GANANCIAS GENERADAS
       </div>
       <div class="card-body">
-        <div class="amount">$0.00<span class="currency">MXN</span></div>
+        <div class="amount">$1,200<span class="currency">MXN</span></div>
         <div class="desc">Total generado en el período</div>
       </div>
     </div>
@@ -496,7 +496,7 @@ body {
         GANANCIAS RECIBIDAS
       </div>
       <div class="card-body">
-        <div class="amount">$0.00<span class="currency">MXN</span></div>
+        <div class="amount">$1,050.00<span class="currency">MXN</span></div>
         <div class="desc">Total ya transferido a tu cuenta</div>
       </div>
     </div>
@@ -543,7 +543,7 @@ body {
     <div class="section">
       <div class="title">Capital actual en movimiento:</div>
       <div>
-        <span class="amount">$0.00</span>
+        <span class="amount">$1,000.00</span>
         <span class="currency">MXN</span>
       </div>
     </div>
@@ -551,7 +551,7 @@ body {
     <div class="section">
       <div class="title">Total invertido en efectivo:</div>
       <div>
-        <span class="amount">$2,000.00</span>
+        <span class="amount">$1,000.00</span>
         <span class="currency">MXN</span>
       </div>
     </div>
@@ -560,18 +560,18 @@ body {
 </div>
 
 <script>
-const planNombre       = "PLAN";
-const montoActual      = 0.00;
-const montoMaximo      = 750.00;
+const planNombre       = "PLAN 1,000 MXN";
+const montoActual      = 1200.00;
+const montoMaximo      = 1500.00;
 const utilidadPorc     = "50%";
-const rentabilidadDiaria = "$25.00 MXN";
+const rentabilidadDiaria = "$50.00 MXN";
 const periodo          = "30 días";
-const ganancia         = "$250.00 MXN";
-const totalRecibir     = "$750.00 MXN";
-const fechaInicio      = "••/••/2026";
+const ganancia         = "$500.00 MXN";
+const totalRecibir     = "$1,500.00 MXN";
+const fechaInicio      = "02/05/2026";
 
 document.getElementById("planTitulo").textContent = planNombre;
-document.getElementById("estado").textContent = "Activar";
+document.getElementById("estado").textContent = "En curso";
 document.getElementById("rentabilidad").textContent = `$${montoActual.toFixed(2).replace('.', ',')} USD`;
 document.getElementById("fecha").textContent = fechaInicio;
 document.getElementById("utilidad").textContent = utilidadPorc;
@@ -609,14 +609,8 @@ document.getElementById("progressDot").style.left = porcentaje + "%";
           <tr>
             <td><span class="lexend-text">$1,000.00 MXN</span></td>
             <td><span class="lexend-text">Deposito</span></td>
-            <td><span class="lexend-text">$1,500.00 MXN</span></td>
-            <td><span class="lexend-text">10/01/2026</span></td>
-          </tr>
-          <tr>
-            <td><span class="lexend-text">$1,000.00 MXN</span></td>
-            <td><span class="lexend-text">Deposito</span></td>
-            <td><span class="lexend-text">$1,500.00 MXN</span></td>
-            <td><span class="lexend-text">28/11/2025</span></td>
+            <td><span class="lexend-text">$1,200.00 MXN</span></td>
+            <td><span class="lexend-text">02/05/2026</span></td>
           </tr>
         </tbody>
       </table>
@@ -692,23 +686,13 @@ document.getElementById("progressDot").style.left = porcentaje + "%";
         <tbody>
           <tr>
             <td><span class="lexend-text">Utilidad</span></td>
-            <td><span class="lexend-text">$1,000.00 MXN</span></td>
-            <td><span class="lexend-text">25/04/2026</span></td>
+            <td><span class="lexend-text">$550.00 MXN</span></td>
+            <td><span class="lexend-text">23/04/2026</span></td>
           </tr>
           <tr>
             <td><span class="lexend-text">Retorno de capital</span></td>
             <td><span class="lexend-text">$500.00 MXN</span></td>
-            <td><span class="lexend-text">16/02/2026</span></td>
-          </tr>
-          <tr>
-            <td><span class="lexend-text">Utilidad</span></td>
-            <td><span class="lexend-text">$500.00 MXN</span></td>
-            <td><span class="lexend-text">07/01/2026</span></td>
-          </tr>
-          <tr>
-            <td><span class="lexend-text">Retorno de capital</span></td>
-            <td><span class="lexend-text">$1000.00 MXN</span></td>
-            <td><span class="lexend-text">17/12/2025</span></td>
+            <td><span class="lexend-text">16/05/2026</span></td>
           </tr>
         </tbody>
       </table>
