@@ -8,32 +8,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { font-family: 'Lexend', sans-serif; }
-        /* Clase para el icono seleccionado */
-        .nav-active { border-color: #3b82f6 !important; background-color: #1e293b; }
     </style>
 </head>
 <body class="bg-gray-100 min-h-screen flex flex-col pt-20">
 
     <header class="bg-[#0f172a] text-white fixed top-0 left-0 right-0 h-20 shadow-xl z-50 px-4 md:px-8 flex items-center justify-between border-b border-slate-800">
-        <!-- Saludo visible siempre -->
         <div class="flex items-center">
-            <span class="text-lg font-bold tracking-wide">Hola, <span class="text-blue-400">Fátima</span></span>
+            <span class="text-lg font-bold tracking-wider" style="font-family: 'Orbitron', sans-serif;">Hola, <span class="text-blue-400">Fátima</span></span>
         </div>
 
-        <nav class="flex items-center space-x-3 md:space-x-5" id="nav-links">
-            <a href="https://akrocever-creator.github.io/Usuarios-Akrocever/US-08-Fatima.html" target="contenedor-virtual" class="nav-btn flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 transition-all duration-200 group active:scale-95" title="Inversión">
+        <nav class="flex items-center space-x-3 md:space-x-5">
+            <a href="https://akrocever-creator.github.io/Usuarios-Akrocever/US-08-Fatima.html" target="contenedor-virtual" 
+               class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 transition-all duration-150 ease-in-out group active:scale-90 active:bg-slate-700 focus:outline-none" 
+               title="Inversión">
                 <i class="fa-solid fa-chart-line text-base md:text-lg text-blue-400 group-hover:scale-110 transition-transform"></i>
             </a>
-            <a href="https://example.com/ahorro" target="contenedor-virtual" class="nav-btn flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 transition-all duration-200 group active:scale-95" title="Ahorro">
+
+            <a href="https://example.com/ahorro" target="contenedor-virtual" 
+               class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 transition-all duration-150 ease-in-out group active:scale-90 active:bg-slate-700 focus:outline-none" 
+               title="Ahorro">
                 <i class="fa-solid fa-piggy-bank text-base md:text-lg text-blue-400 group-hover:scale-110 transition-transform"></i>
             </a>
-            <a href="https://akrocever-creator.github.io/Sistema-Akrocever/Proyecto-inversion.html" target="contenedor-virtual" class="nav-btn flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 transition-all duration-200 group active:scale-95" title="Negocios">
+
+            <a href="https://akrocever-creator.github.io/Sistema-Akrocever/Proyecto-inversion.html" target="contenedor-virtual" 
+               class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 transition-all duration-150 ease-in-out group active:scale-90 active:bg-slate-700 focus:outline-none" 
+               title="Negocios">
                 <i class="fa-solid fa-wallet text-base md:text-lg text-blue-400 group-hover:scale-110 transition-transform"></i>
             </a>
-            <a href="https://example.com/pagos" target="contenedor-virtual" class="nav-btn flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 transition-all duration-200 group active:scale-95" title="Pagos">
+
+            <a href="https://example.com/pagos" target="contenedor-virtual" 
+               class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 transition-all duration-150 ease-in-out group active:scale-90 active:bg-slate-700 focus:outline-none" 
+               title="Pagos">
                 <i class="fa-solid fa-credit-card text-base md:text-lg text-blue-400 group-hover:scale-110 transition-transform"></i>
             </a>
         </nav>
@@ -43,20 +52,5 @@
         <iframe name="contenedor-virtual" src="https://akrocever-creator.github.io/Usuarios-Akrocever/Noticiask.html" class="w-full h-full border-none" title="Contenido de Oficina Virtual"></iframe>
     </main>
 
-    <script>
-        // Lógica para marcar el icono seleccionado y desmarcar los otros
-        const links = document.querySelectorAll('.nav-btn');
-        links.forEach(link => {
-            link.addEventListener('click', function() {
-                links.forEach(l => l.classList.remove('nav-active'));
-                this.classList.add('nav-active');
-            });
-        });
-
-        // Opcional: Si quieres que al recargar la página se quite la marca, puedes añadir esto:
-        window.addEventListener('pageshow', () => {
-            links.forEach(l => l.classList.remove('nav-active'));
-        });
-    </script>
 </body>
 </html>
