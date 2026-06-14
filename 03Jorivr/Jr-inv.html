@@ -443,7 +443,7 @@ body {
 
   <!-- Header azul -->
   <div class="main-header">
-    <h1>¡HOLA JOSÉ!</h1>
+    <h1>MIS INVERSIÓNES</h1>
     <p>Monitorea tu proyecto de inversión aquí</p>
   </div>
 
@@ -453,25 +453,25 @@ body {
   <div class="dashboard">
     <div class="card">
       <div class="card-header">
-        <div class="icon"><span class="icon-text">$</span></div>
+        <div class="icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="#3e8fb8" stroke-width="2" fill="none"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </div>
         SALDO ACTUAL
       </div>
       <div class="card-body">
         <div class="amount">$150.00<span class="currency">USD</span></div>
-        <div class="desc">Ingresos pasivos acumulados</div>
+        <div class="desc">Ingresos pasivos, pendiente para recibir</div>
       </div>
     </div>
 
     <div class="card">
       <div class="card-header">
-        <div class="icon">
-          <svg viewBox="0 0 24 24" width="24" height="24" stroke="#3e8fb8" stroke-width="2" fill="none"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-        </div>
-        SALDO DISPONIBLE
+        <div class="icon"><span class="icon-text">$</span></div>   
+        GANANCIAS GENERADAS
       </div>
       <div class="card-body">
-        <div class="amount">$0.00<span class="currency">USD</span></div>
-        <div class="desc">Pendiente por recibir en efectivo</div>
+        <div class="amount">$50.00<span class="currency">USD</span></div>
+        <div class="desc">Utilidad</div>
       </div>
     </div>
 
@@ -480,11 +480,12 @@ body {
         <div class="icon">
           <svg viewBox="0 0 24 24" width="24" height="24" stroke="#3e8fb8" stroke-width="2" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         </div>
-        GANANCIAS GENERADAS
+        TOTAL DE INGRESOS
       </div>
       <div class="card-body">
         <div class="amount">$150.00<span class="currency">USD</span></div>
-        <div class="desc">Total generado en el período</div>
+        <div class="desc">Retorno de capital + Utilidad</div>
+        <div class="desc"> (desde que inició) </div>
       </div>
     </div>
 
@@ -493,11 +494,12 @@ body {
         <div class="icon">
           <svg viewBox="0 0 24 24" width="24" height="24" stroke="#3e8fb8" stroke-width="2" fill="none"><path d="M20 6L9 17l-5-5"/></svg>
         </div>
-        GANANCIAS RECIBIDAS
+        INGRESOS RECIBIDOS
       </div>
       <div class="card-body">
         <div class="amount">$0.00<span class="currency">USD</span></div>
-        <div class="desc">Total ya transferido a tu cuenta</div>
+        <div class="desc">Retorno de capital + Utilidad</div>
+        <div class="desc"> (Ya transferido a tu cuenta) </div>
       </div>
     </div>
   </div>
@@ -551,7 +553,7 @@ body {
     <div class="section">
       <div class="title">Total invertido en efectivo:</div>
       <div>
-        <span class="amount">$150.00</span>
+        <span class="amount">$100.00</span>
         <span class="currency">USD</span>
       </div>
     </div>
@@ -567,7 +569,7 @@ const utilidadPorc     = "50%";
 const rentabilidadDiaria = "$1.25 USD";
 const periodo          = "30 días";
 const ganancia         = "$12.50 USD";
-const totalRecibir     = "$37.50 USD";
+const totalRecibir     = "$37.50 MXN";
 const fechaInicio      = "••/••/2026";
 
 document.getElementById("planTitulo").textContent = planNombre;
@@ -599,102 +601,27 @@ document.getElementById("progressDot").style.left = porcentaje + "%";
       <table class="completed-table">
         <thead>
           <tr>
+            <th>#</th>
             <th>Plan</th>
-            <th>Tipo</th>
+            <th>Concepto</th>
             <th>Ganancia generada</th>
             <th>Fecha</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><span class="lexend-text">$50.00 USD</span></td>
+            <td><span class="lexend-text">2</span></td>
+            <td><span class="lexend-text">50.00 USD</span></td>
             <td><span class="lexend-text">Depósito</span></td>
-            <td><span class="lexend-text">$75.00 USD</span></td>
+            <td><span class="lexend-text">75.00 USD</span></td>
             <td><span class="lexend-text">27/01/2026</span></td>
           </tr>
           <tr>
-            <td><span class="lexend-text">$50.00 USD</span></td>
+            <td><span class="lexend-text">1</span></td>
+            <td><span class="lexend-text">50.00 USD</span></td>
             <td><span class="lexend-text">Depósito</span></td>
-            <td><span class="lexend-text">$75.00 USD</span></td>
+            <td><span class="lexend-text">75.00 USD</span></td>
             <td><span class="lexend-text">07/01/2026</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-  </div>
-
-  <div class="completed-card" style="margin-bottom: 48px;">
-    <div class="completed-header">REFERIDOS</div>
-
-    <div class="table-wrapper">
-      <table class="completed-table">
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Usuario</th>
-            <th>Fecha de registro</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="lexend-text">•••</span></td>
-            <td><span class="lexend-text">•••</span></td>
-            <td><span class="lexend-text">••/••/2026</span></td>
-          </tr>
-          <tr>
-
-          </tr>
-          <tr></tr>
-        </tbody>
-      </table>
-    </div>
-
-  </div>
-
-  <div class="completed-card" style="margin-bottom: 48px;">
-    <div class="completed-header">GANANCIAS POR REFERIDOS</div>
-
-    <div class="table-wrapper">
-      <table class="completed-table">
-        <thead>
-          <tr>
-            <th>Residual</th>
-            <th>Por usuario</th>
-            <th>Recibido</th>
-            <th>Fecha</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="lexend-text">•••</span></td>
-            <td><span class="lexend-text">•••</span></td>
-            <td><span class="lexend-text">•••</span></td>
-            <td><span class="lexend-text">••/••/2026</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-  </div>
-
-  <div class="completed-card" style="margin-bottom: 48px;">
-    <div class="completed-header">PAGOS EN EFECTIVO</div>
-
-    <div class="table-wrapper">
-      <table class="completed-table">
-        <thead>
-          <tr>
-            <th>Tipo</th>
-            <th>Recibido</th>
-            <th>Fecha</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="lexend-text">•••</span></td>
-            <td><span class="lexend-text">$0.00 USD</span></td>
-            <td><span class="lexend-text">••/••/2026</span></td>
           </tr>
         </tbody>
       </table>
@@ -709,20 +636,20 @@ document.getElementById("progressDot").style.left = porcentaje + "%";
       <table class="completed-table">
         <thead>
           <tr>
-            <th>tipo</th>
-            <th>Cantidad</th>
+            <th>Concepto</th>
+            <th>Monto</th>
             <th>Fecha</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><span class="lexend-text">Plan</span></td>
-            <td><span class="lexend-text">$50.00 USD</span></td>
+            <td><span class="lexend-text">50.00 USD</span></td>
             <td><span class="lexend-text">27/01/2026</span></td>
           </tr>
           <tr>
             <td><span class="lexend-text">Plan</span></td>
-            <td><span class="lexend-text">$50.00 USD</span></td>
+            <td><span class="lexend-text">50.00 USD</span></td>
             <td><span class="lexend-text">07/01/2026</span></td>
           </tr>
         </tbody>
